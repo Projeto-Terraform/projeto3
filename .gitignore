@@ -1,3 +1,8 @@
+aws-key
+aws-key.pub
+key-vm
+key-vm.pub
+
 # Local .terraform directories
 **/.terraform/*
 
