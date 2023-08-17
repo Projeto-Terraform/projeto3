@@ -21,7 +21,7 @@ resource "aws_instance" "vm" {
       "echo private_ip: ${self.private_ip} >> /tmp/private_ip.txt",
     ]
   }
-  
+
   /*Usamos o CONTENT para criar um arquivo de texto dentro da
   nossa máquina virtual contendo o Public IP da VM*/
   provisioner "file" {

@@ -47,7 +47,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
       "echo subnet_id: ${data.terraform_remote_state.vnet.outputs.subnet_id_azure} >> /tmp/subnet_id.txt",
     ]
   }
-  
+
   provisioner "file" {
     content     = "public_ip: ${self.public_ip_address}"
     destination = "/tmp/public-ip.txt"
