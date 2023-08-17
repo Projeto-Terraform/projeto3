@@ -41,11 +41,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
   admin_username        = "terraform"
   network_interface_ids = [azurerm_network_interface.network_interface.id]
 
-  /*provisioner "local-exec" {
+  provisioner "local-exec" {
     command = "echo ${self.public_ip_address} >> public-ip.txt"
   }
 
-  /*provisioner "file" {
+  provisioner "file" {
     content     = "public_ip: ${self.public_ip_address}"
     destination = "/tmp/public-ip.txt"
   }
@@ -67,7 +67,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
       "echo location: ${var.location} >> /tmp/location.txt",
       "echo subnet_id: ${data.terraform_remote_state.vnet.outputs.subnet_id_azure} >> /tmp/subnet_id.txt",
     ]
-  }*/
+  }
 
   # colocar o comando abaixo no terminal para gerar as chaves localmente:
   # ssh-keygen -f key-vm
