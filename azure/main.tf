@@ -4,7 +4,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "3.57.0"
+      version = "3.68.0"
     }
   }
 
@@ -12,7 +12,7 @@ terraform {
     resource_group_name  = "projeto-terraform-resource-group"
     storage_account_name = "storageaccounttf2112"
     container_name       = "projeto-terraform-container"
-    key                  = "azure-vm/terraform.tfstate"
+    key                  = "azure-vm-provisioners/terraform.tfstate"
   }
 }
 
